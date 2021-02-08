@@ -491,7 +491,6 @@ export function getIncompatibleCordovaPlugins(platform: string): string[] {
     '@ionic-enterprise/filesystem',
     '@ionic-enterprise/keyboard',
     '@ionic-enterprise/splashscreen',
-    'cordova-support-google-services',
   ];
   if (platform === 'ios') {
     pluginList.push('cordova-plugin-statusbar', '@ionic-enterprise/statusbar');

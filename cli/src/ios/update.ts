@@ -412,13 +412,6 @@ async function copyPluginsNativeFiles(
           fileContent = 'import Cordova\n' + fileContent;
           await writeFile(fileDest, fileContent, { encoding: 'utf-8' });
         } else {
-          if (fileContent.includes('@import Firebase;')) {
-            fileContent = fileContent.replace(
-              '@import Firebase;',
-              '#import <Firebase/Firebase.h>',
-            );
-            await writeFile(fileDest, fileContent, { encoding: 'utf-8' });
-          }
           if (
             fileContent.includes('[NSBundle bundleForClass:[self class]]') ||
             fileContent.includes('[NSBundle bundleForClass:[CDVCapture class]]')
